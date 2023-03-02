@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define LIN 5
+#define COL 4
+#define ALU 60
+
+int main (){
+	
+	char aluno[LIN][ALU];
+	int linha, coluna;
+	float notas[LIN][COL];
+	
+	
+	for (linha=0; linha<LIN; ++linha){
+		printf("\nDigite o nome do aluno: ");
+		gets(aluno[linha]);
+			printf("\n");
+		for (coluna=0; coluna<COL; ++coluna){
+			printf("%s - NOTA N%d: ",aluno[linha],coluna+1);
+			scanf("%f",&notas[linha][coluna]);
+			
+		}
+	fflush(stdin);
+
+	}
+		
+	system("cls");
+
+	for (linha=0; linha<LIN; ++linha){
+	printf("%s\t\t: ",aluno[linha]);
+	for (coluna=0; coluna<COL; ++coluna){
+	printf("%.1f\t",notas[linha][coluna]);
+
+}
+	printf("\n");
+}
+
+	return 0;
+}
