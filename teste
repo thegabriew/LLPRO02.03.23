@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define LIN 5
+#define COL 4
+
+int main (){
+	
+	int linha, coluna;
+	float notas[LIN][COL];
+	
+	
+	for (linha=0; linha<LIN; ++linha){
+		for (coluna=0; coluna<COL; ++coluna){
+			printf("Nota %d do aluno %d: ",linha+1,coluna+1);
+			scanf("%f",&notas[linha][coluna]);
+		}
+	}
+	
+	system("cls");
+	
+	printf("Aluno 1\t\tAluno 2\t\tAluno 3\t\tAluno 4\n");
+	for (linha=0; linha<LIN; ++linha){
+	for (coluna=0; coluna<COL; ++coluna){
+	printf("%.1f \t\t",notas[linha][coluna]);
+
+}
+	printf("\n");
+}
+
+	return 0;
+}
